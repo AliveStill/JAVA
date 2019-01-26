@@ -1,0 +1,19 @@
+import java.util.*;
+
+public class Main {
+    public static int fib(int f)
+    {
+        if(f==1||f==2)
+        {
+            return 1;
+        }else{
+            return fib(f-1)+fib(f-2);
+        }
+    }
+    public static void main(String[] args)
+    {
+        Scanner scanner = new Scanner(System.in);
+        int x = scanner.nextInt();
+        System.out.print(fib(x));
+    }
+}
