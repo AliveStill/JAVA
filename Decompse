@@ -1,0 +1,47 @@
+import java.util.*;
+
+
+public class Decompose {
+    public static void decompose(int x)
+    {
+        if(isPrime(x))
+        {
+            System.out.print(x);
+        }else
+        {
+            int fPrime = foundPrime(x);
+            System.out.print(fPrime+"*");
+            decompose(x/fPrime);
+        }
+    }
+    public static boolean isPrime(int x)
+    {
+        for(int i=2;i<=Math.sqrt(x);i++)
+        {
+            if(x%i==0)
+            {
+                return false;
+            }
+        }
+        return true;
+    }
+    public static int foundPrime(int x)
+    {
+        for(int i=2;i<=Math.sqrt(x);i++)
+        {
+            if(x%i==0)
+            {
+                return i;
+            }
+        }
+        return 0;
+    }
+    public static void main(String[] args)
+    {
+        Scanner scanner = new Scanner(System.in);
+        int x = scanner.nextInt();
+//        建立在x是一个大于1的正整数的假设的基础上
+        System.out.print(x+" = ");
+        decompose(x);
+    }
+}
