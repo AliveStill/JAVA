@@ -1,0 +1,25 @@
+/*read two integers and give their maximum common divisor and minimum common multiple*/
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args)
+    {
+        System.out.println("Please give two numbers.");
+        Scanner scanner = new Scanner(System.in);
+        int x = scanner.nextInt();
+        int y = scanner.nextInt();
+        int common = commonDivisor(x,y);
+        System.out.print(common+" "+x*y/common);
+    }
+
+    private static int commonDivisor(int x,int y)
+    {
+        if(y==0)
+        {
+            return x;
+        }else
+        {
+            return commonDivisor(y,x%y);
+        }
+    }
+}
