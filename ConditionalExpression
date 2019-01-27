@@ -1,0 +1,17 @@
+/*read three integers and give the biggest number of them*/
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args)
+    {
+        System.out.println("Please input three integers and I'll give the biggest one.");
+        Scanner scanner = new Scanner(System.in);
+        int x = scanner.nextInt();
+        int y = scanner.nextInt();
+        int z = scanner.nextInt();
+        int maximum;
+        maximum = x>y?x:y;
+        maximum = maximum>z?maximum:z;
+        System.out.println("The largest number is "+maximum);
+    }
+}
