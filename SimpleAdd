@@ -1,4 +1,5 @@
-/*compute s = a+aa+aaa+...+a...a, in which n stands for the largest bits of the formula.*/
+/*compute s = a+aa+aaa+...+a...a, in which n stands for the largest bits of the formula.
+* assume that a is an integer which is no more than 9 and no less than 1*/
 import java.util.*;
 
 public class Main {
