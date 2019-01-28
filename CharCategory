@@ -1,0 +1,39 @@
+/*read a series of characters and counter the numbers of alphabet, space, numbers,and others*/
+import java.util.*;
+
+
+public class Main {
+    public static void main(String[] args)
+    {
+        System.out.println("Please input a series of characters.");
+        Scanner scanner = new Scanner(System.in);
+//        假设输入在一行中完成
+//        java内置Character类提供处理字符的方法
+
+        String str = scanner.nextLine();
+        char[] chArray = str.toCharArray();
+        int countAlp=0;
+        int countSpa=0;
+        int countNum=0;
+        int countOth=0;
+
+        for(int i=0;i<chArray.length;i++)
+        {
+            if(Character.isLetter(chArray[i]))
+            {
+                countAlp++;
+            }else if(Character.isWhitespace(chArray[i]))
+            {
+                countSpa++;
+            }else if(Character.isDigit(chArray[i]))
+            {
+                countNum++;
+            }else
+            {
+                countOth++;
+            }
+        }
+        System.out.println("Alp     Spa     Num     Oth");
+        System.out.println(countAlp+"      "+countSpa+"       "+countNum+"        "+countOth);
+    }
+}
