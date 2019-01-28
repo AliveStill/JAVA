@@ -1,0 +1,21 @@
+/*
+* @Description:assume that there is a ball 100 meters above in the air dropping down to the ground, and every time
+* it get to the ground it will bound to the height of it's original. After ten rounds,Please give it's
+* length of way through and it's maximum height at the last round.
+* @author LingHaiJun
+* @data 2019/1/28
+* @time 16:12 p.m.
+* */
+
+public class Main {
+    public static void main(String[] args){
+        double sum = 0.0;
+        double eve = 100;
+        for(int i=0;i<10;i++,eve/=2)
+        {
+            sum += i!=0? eve*2:eve;
+//      every time it bounds it will go through double of its maximum height except the first one
+        }
+        System.out.print(sum+" "+eve);
+    }
+}
